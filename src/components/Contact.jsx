@@ -1,7 +1,7 @@
 import Reveal from './Reveal'
 import { withBase } from '../utils/withBase'
 
-const cvSrc = withBase('/cv.pdf')
+const cvSrc = withBase('/CV%20Sandul%20(L).pdf')
 
 const iconProps = {
   width: 24,

@@ -4,7 +4,7 @@ import { withBase } from '../utils/withBase'
 
 const words = ['Ethical Hacking', 'Network Security', 'Linux Administration', 'DevOps']
 const portraitSrc = withBase('/profile-photo.jpg')
-const cvSrc = withBase('/cv.pdf')
+const cvSrc = withBase('/CV%20Sandul%20(L).pdf')
 const focusTags = ['Packet Analysis', 'Linux Hardening', 'Firewall Tuning', 'Incident Readiness']
 
 function Typewriter() {
