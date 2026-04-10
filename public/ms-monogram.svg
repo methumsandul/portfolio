@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="msBg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F46E5"/>
+      <stop offset="0.5" stop-color="#0D9488"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="msStroke" x1="14" y1="16" x2="50" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFF"/>
+      <stop offset="1" stop-color="#C8E7FF"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A5B4FC" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#67E8F9" stop-opacity="0.45"/>
+    </linearGradient>
+    <filter id="softGlow" x="8" y="10" width="48" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="1.5" result="effect1_foregroundBlur"/>
+    </filter>
+  </defs>
+
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="#070B12"/>
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#msBg)" fill-opacity="0.24"/>
+  <rect x="4.5" y="4.5" width="55" height="55" rx="15.5" stroke="url(#edge)"/>
+
+  <path d="M15 45V19L24 33L32 19V45" stroke="url(#msStroke)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M47 24C47 19.8 43.7 17.5 39.3 17.5C34.8 17.5 31.7 19.9 31.7 23.8C31.7 27.8 34.6 29.7 39.3 30.9C43.9 32.1 47 33.5 47 38C47 42.1 43.8 45 38.7 45C33.8 45 30.5 42.5 29.8 38.2" stroke="url(#msStroke)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#softGlow)" opacity="0.58">
+    <path d="M15 45V19L24 33L32 19V45" stroke="#D8EEFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M47 24C47 19.8 43.7 17.5 39.3 17.5C34.8 17.5 31.7 19.9 31.7 23.8C31.7 27.8 34.6 29.7 39.3 30.9C43.9 32.1 47 33.5 47 38C47 42.1 43.8 45 38.7 45C33.8 45 30.5 42.5 29.8 38.2" stroke="#D8EEFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

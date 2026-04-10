@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="msBg" x1="7" y1="6" x2="57" y2="59" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F46E5"/>
+      <stop offset="0.55" stop-color="#0D9488"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="msStroke" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A5B4FC" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#67E8F9" stop-opacity="0.42"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="#090D14"/>
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#msBg)" fill-opacity="0.22"/>
+  <rect x="4.5" y="4.5" width="55" height="55" rx="15.5" stroke="url(#msStroke)"/>
+  <path d="M15 22.5h34M15 31.5h34M15 40.5h34" stroke="#D8E2F3" stroke-opacity="0.08"/>
+  <text x="32" y="40" text-anchor="middle" fill="#EAF1FC" font-family="DM Mono, IBM Plex Mono, monospace" font-size="24" font-weight="600" letter-spacing="1.2">MS</text>
+</svg>
