@@ -1,4 +1,7 @@
 import Reveal from './Reveal'
+import { withBase } from '../utils/withBase'
+
+const cvSrc = withBase('/cv.pdf')
 
 const iconProps = {
   width: 24,
@@ -100,7 +103,7 @@ export default function Contact() {
               <p className="section-copy" style={{ maxWidth: 400, marginBottom: '2rem' }}>
                 I'm actively looking for internship opportunities in cybersecurity, networking, or sysadmin. If you think I'd be a good fit, reach out.
               </p>
-              <a href="/cv.pdf" download className="btn-primary" style={{ display: 'inline-flex' }}>
+              <a href={cvSrc} download className="btn-primary" style={{ display: 'inline-flex' }}>
                 Download CV
               </a>
             </Reveal>

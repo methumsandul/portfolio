@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Reveal from './Reveal'
+import { withBase } from '../utils/withBase'
 
 const projects = [
   {
@@ -16,11 +17,11 @@ const projects = [
     tags: ['Cisco IOS', 'VLAN', 'Inter-VLAN routing', 'Switching'],
     gallery: [
       {
-        src: '/images/projects/project-01-1.jpg',
+        src: withBase('/images/projects/project-01-1.jpg'),
         alt: 'Network topology view for the VLAN rollout project', 
       },
       {
-        src: '/images/projects/project-01-2.jpg',
+        src: withBase('/images/projects/project-01-2.jpg'),
         alt: 'Configuration or validation view for the VLAN rollout project', 
       },
     ],

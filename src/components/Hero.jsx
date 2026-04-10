@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { withBase } from '../utils/withBase'
 
 const words = ['Ethical Hacking', 'Network Security', 'Linux Administration', 'DevOps']
-const portraitSrc = '/profile-photo.jpg'
+const portraitSrc = withBase('/profile-photo.jpg')
+const cvSrc = withBase('/cv.pdf')
 const focusTags = ['Packet Analysis', 'Linux Hardening', 'Firewall Tuning', 'Incident Readiness']
 
 function Typewriter() {
@@ -123,7 +125,7 @@ export default function Hero() {
             style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '1rem' }}
           >
             <a href="#contact" className="btn-primary">Get in touch</a>
-            <a href="/cv.pdf" download className="btn-ghost">Download CV</a>
+            <a href={cvSrc} download className="btn-ghost">Download CV</a>
             <a href="#projects" className="btn-ghost">View projects</a>
           </motion.div>
 
