@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { withBase } from '../utils/withBase'
+import { downloadFile } from '../utils/downloadFile'
 
 const words = ['Ethical Hacking', 'Network Security', 'Linux Administration', 'DevOps']
 const portraitSrc = withBase('/profile-photo.jpg')
-const cvSrc = withBase('/CV%20Sandul%20(L).pdf')
+const cvSrc = withBase('/cv.pdf')
+const cvFileName = 'Methum-Sandul-CV.pdf'
 const focusTags = ['Packet Analysis', 'Linux Hardening', 'Firewall Tuning', 'Incident Readiness']
 
 function Typewriter() {
@@ -40,6 +42,15 @@ function Typewriter() {
 
 export default function Hero() {
   const [photoState, setPhotoState] = useState('loading')
+
+  const handleDownloadCv = async (event) => {
+    event.preventDefault()
+    const downloaded = await downloadFile(cvSrc, cvFileName)
+
+    if (!downloaded) {
+      window.location.assign(cvSrc)
+    }
+  }
 
   useEffect(() => {
     const portrait = new window.Image()
@@ -125,7 +136,7 @@ export default function Hero() {
             style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '1rem' }}
           >
             <a href="#contact" className="btn-primary">Get in touch</a>
-            <a href={cvSrc} download className="btn-ghost">Download CV</a>
+            <a href={cvSrc} download={cvFileName} onClick={handleDownloadCv} className="btn-ghost">Download CV</a>
             <a href="#projects" className="btn-ghost">View projects</a>
           </motion.div>
 

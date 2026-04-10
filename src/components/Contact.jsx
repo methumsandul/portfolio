@@ -1,7 +1,9 @@
 import Reveal from './Reveal'
 import { withBase } from '../utils/withBase'
+import { downloadFile } from '../utils/downloadFile'
 
-const cvSrc = withBase('/CV%20Sandul%20(L).pdf')
+const cvSrc = withBase('/cv.pdf')
+const cvFileName = 'Methum-Sandul-CV.pdf'
 
 const iconProps = {
   width: 24,
@@ -83,6 +85,15 @@ const links = [
 ]
 
 export default function Contact() {
+  const handleDownloadCv = async (event) => {
+    event.preventDefault()
+    const downloaded = await downloadFile(cvSrc, cvFileName)
+
+    if (!downloaded) {
+      window.location.assign(cvSrc)
+    }
+  }
+
   return (
     <section id="contact" style={{ padding: '7rem 8%' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
@@ -103,7 +114,7 @@ export default function Contact() {
               <p className="section-copy" style={{ maxWidth: 400, marginBottom: '2rem' }}>
                 I'm actively looking for internship opportunities in cybersecurity, networking, or sysadmin. If you think I'd be a good fit, reach out.
               </p>
-              <a href={cvSrc} download className="btn-primary" style={{ display: 'inline-flex' }}>
+              <a href={cvSrc} download={cvFileName} onClick={handleDownloadCv} className="btn-primary" style={{ display: 'inline-flex' }}>
                 Download CV
               </a>
             </Reveal>
